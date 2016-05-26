@@ -18,27 +18,10 @@
      
      <!-- Begin Naviagtion -->
          <div id="navigation">
-         <ul>
-            <li>
-                <a href="#news">
-                    <img name="navnews" border="0" src="img/navnews00.gif" onmouseover="this.src='img/navnews01.gif';" onmouseout="this.src='img/navnews00.gif';" />
-                </a>
-            </li>
-            <li>
-                <a href="#members">
-                    <img name="navmembers" border="0" src="img/navmembers00.gif" onmouseover="this.src='img/navmembers01.gif';" onmouseout="this.src='img/navmembers00.gif';" />
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <img name="navabout" border="0" src="img/navaboutus00.gif" onmouseover="this.src='img/navaboutus01.gif';" onmouseout="this.src='img/navaboutus00.gif';" />
-                </a>
-            </li>
-            
-        </ul>
+           {{ include('navbar.html.twig') }}
 
                 
-        <div id="clock" style="background-image:url(img/nav00.gif)">
+        <div id="clock" style="background-image:url('{{ asset('img/nav00.gif') }}')">
             <p id="pendule">time</p>
             <p id="date">date</p>
             
@@ -62,7 +45,7 @@
         </div>
         
         <a id="w3c" href="http://validator.w3.org/check?uri=http://www.82110clan.de" target="_blank">
-            <img src="img/w3c-valid.gif">
+            <img src="{{ asset('img/w3c-valid.gif') }}">
         </a>
          
      </div>
@@ -73,10 +56,10 @@
      
 <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td><img ALT="" src="img/head00news.gif" width="104" height="39"></td>
-            <td><img ALT="" src="img/head01.gif" width="29" height="39"></td>
-            <td><img ALT="" src="img/head02.gif" width="94" height="39"></td>
-            <td><img ALT="" src="img/head03.gif" height="39"></td>
+            <td><img ALT="" src="{{ asset('img/head00news.gif') }}" width="104" height="39"></td>
+            <td><img ALT="" src="{{ asset('img/head01.gif') }}" width="29" height="39"></td>
+            <td><img ALT="" src="{{ asset('img/head02.gif') }}" width="94" height="39"></td>
+            <td><img ALT="" src="{{ asset('img/head03.gif') }}" height="39"></td>
           </tr>
 </table>
 <table cellpadding="4" border="1">
@@ -208,7 +191,7 @@
      <!-- Begin Footer -->
      <div id="footer" >
 
-        <img src="{{ asset('images/footer00.png') }}">
+        <img src="{{ asset ('images/footer00.png') }}">
         <div id="footerlinks">
             <ul>
                 <li><a href="#news">news</a></li>
@@ -222,7 +205,7 @@
             </ul>
          
 82IIo.CLAN | Copyright 2001-2016
-            <img src="{{ asset('images/footer01.png') }}">
+            <img src="{{ asset ('images/footer01.png') }}">
         </div>
        </div>
      <!-- End Footer -->
