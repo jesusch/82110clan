@@ -63,32 +63,17 @@ body {
 }
 #footer { 
     width: 761px;
-    background-color: #BD9C8C;
     clear:both;
     font-family : Verdana, Arial, Helvetica, sans-serif;
     font-size: 1;
     font-color: #88CAEE;
+    /* background-image:url(images/footer01.png) */
+    
 }
 
-#footerlinks {
-    background-image:url(/images/footer01.png);
+#footerlinks li {
+	display: inline;
 }
-
-#footerlinks ul {
-    list-style-type: upper-roman;
-    margin: 0;
-    padding: 0;
-    list-style-position: inside;
-    display:inline;
-}
-#footerlinks li a {
-    display: inline;
-    padding: 0;
-    display: inline;
-	list-style-type: none;
-	padding-right: 20px;
-}
-
 
 A:Visited  {
     font-family : Verdana, Arial, Helvetica, sans-serif;

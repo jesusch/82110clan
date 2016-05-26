@@ -1,0 +1,28 @@
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="{{ asset('img/head00' ~ name ~ '.gif') }}" ></td>
+            <td><img src="{{ asset('img/head01.gif') }}"></td>
+            <td><img src="{{ asset('img/head02.gif') }}"></td>
+            <td><img src="{{ asset('img/head03.gif') }}"></td>
+          </tr>
+</table>
+
+
+{% for item in news %}
+
+<div id="mainTable">
+    <div id="mainTableHeader">{{ item.id }} - {{ item.subject }}</div>
+    <div id="mainTableContent">{{ item.post }}</div>
+    <div id="mainTableFooter">
+        posted by {{ item.user.getUser }} | {{ item.date.format('Y-m-d') }}
+        <b><a href="/news/{{ item.id }}">1 comment(s)</a></b>
+    
+    </div>
+</div>
+<br>
+
+{% endfor %}
