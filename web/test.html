@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p>Click the button to display todays day of the month.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var d = new Date();
+    var n = d.getDate();
+    document.getElementById("demo").innerHTML = n;
+}
+window.onload = myFunction;
+</script>
+
+</body>
+</html>
