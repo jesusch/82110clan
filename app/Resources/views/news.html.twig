@@ -1,0 +1,19 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+
+
+{% for item in news %}
+<table class="mainTable">
+<tr><th class="mainTableHeader" colspan="2">{{ item.id }} - {{ item.subject }}</thead></tr>
+<tr><td colspan="2">{{ item.post }}</td></tr>
+<tr class="mainTableFooter">
+    <td width="75%">posted by {{ item.user.getUser }} | {{ item.date.format('Y-m-d') }}</td>
+    <td><a href="/news/{{ item.id }}">1 comment(s)</a></td>
+</tr>
+</table>
+
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+
+
+
+
+<table class="mainTable">
+<tr><th class="mainTableHeader" colspan="2">Persönliche Daten von {{ user.user }}</thead></tr>
+<tr>
+    <td>Pic</td>
+    <td><img src="{{ asset('pics/13-memberpic.jpg') }}"></td>
+</tr>
+<tr>
+    <td>email</td>
+    <td>{{ user.getWebEmail }}</td>
+</tr>
+<tr>
+    <td>Wohnort</td>
+    <td>{{ user.zip }} {{ user.hometown }}</td>
+</tr>
+<tr>
+    <td>Geburtstag</td>
+    <td>{{ user.birthday.format('d.m.Y') }}</td>
+</tr>
+<tr>
+    <td>Mitglied seit</td>
+    <td>{{ user.memberSince.format('d.m.Y') }}</td>
+</tr>
+<tr>
+    <td>SkillZ</td>
+    <td>{{ user.skills }}</td>
+</tr>
+<tr>
+    <td>Hardware</td>
+    <td>{{ user.hardware }}</td>
+</tr>
+<tr>
+    <td>I-Net Verbindung</td>
+    <td>{{ user.inet }}</td>
+</tr>
+</table>
+
+
+
+{% endblock %}

@@ -1,5 +1,5 @@
 <ul>
 {% for item in navbar %}
-	<li><a href="#{{ item }}"><img name="{{ item }}" border="0" src="{{ asset('img/nav' ~ item ~ '00.gif') }}" onmouseover="this.src='{{ asset('img/nav' ~ item ~ '01.gif') }}';" onmouseout="this.src='{{ asset('img/nav' ~ item ~ '00.gif') }}';" /></a></li>
+	<li><a href="{{ path(item) }}"><img name="{{ item }}" src="{{ asset('img/nav' ~ item ~ '00.gif') }}" onmouseover="this.src='{{ asset('img/nav' ~ item ~ '01.gif') }}';" onmouseout="this.src='{{ asset('img/nav' ~ item ~ '00.gif') }}';" /></a></li>
 {% endfor %}
 </ul>

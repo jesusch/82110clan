@@ -1,0 +1,158 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Links
+ *
+ * @ORM\Table(name="links")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\LinksRepository")
+ */
+class Links
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="href", type="string", length=255)
+     */
+    private $href;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="count", type="integer")
+     */
+    private $count;
+    
+    
+    /**
+     * @ORM\ManyToOne(targetEntity="Groups", inversedBy="links")
+     * @ORM\JoinColumn(name="groups_id", referencedColumnName="id")
+     */
+    private $groups;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Links
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set href
+     *
+     * @param string $href
+     *
+     * @return Links
+     */
+    public function setHref($href)
+    {
+        $this->href = $href;
+
+        return $this;
+    }
+
+    /**
+     * Get href
+     *
+     * @return string
+     */
+    public function getHref()
+    {
+        return $this->href;
+    }
+
+    /**
+     * Set count
+     *
+     * @param integer $count
+     *
+     * @return Links
+     */
+    public function setCount($count)
+    {
+        $this->count = $count;
+
+        return $this;
+    }
+
+    /**
+     * Get count
+     *
+     * @return int
+     */
+    public function getCount()
+    {
+        return $this->count;
+    }
+
+    /**
+     * Set groups
+     *
+     * @param \AppBundle\Entity\Groups $groups
+     *
+     * @return Links
+     */
+    public function setGroups(\AppBundle\Entity\Groups $groups = null)
+    {
+        $this->groups = $groups;
+
+        return $this;
+    }
+
+    /**
+     * Get groups
+     *
+     * @return \AppBundle\Entity\Groups
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+}

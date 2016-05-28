@@ -1,0 +1,15 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+
+{% for item in links %}
+<table class="mainTable">
+<tr><td>{{ item.description }}</td></tr>
+<tr><td>{{ item.description }}<img src=""></td></tr>
+<tr><td><a href="http://{{ item.href }}">{{ item.href }}</a> || {{ item.count }} Hits</td></tr>
+</table>
+
+
+{% endfor %}
+
+{% endblock %}

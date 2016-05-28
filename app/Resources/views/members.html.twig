@@ -1,0 +1,15 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+
+
+<table class="mainTable">
+<tr><th class="mainTableHeader" colspan="2">foo</thead></tr>
+{% for item in users %}
+<tr>
+    <td><a href="{{ path('members') ~ '/' ~ item.id }}">{{ item.user }}<a></td>
+    <td>{{ item.email }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

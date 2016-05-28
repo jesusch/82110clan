@@ -1,5 +1,5 @@
 <ul>
 {% for item in navbar %}
-	<li><a href="#{{ item }}">{{ item }}</a></li>
+	<li><a href="{{ path(item) }}">{{ item }}</a></li>
 {% endfor %}
 </ul>
