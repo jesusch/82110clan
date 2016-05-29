@@ -5,7 +5,7 @@
 
 {% for item in news %}
 <table class="mainTable">
-<tr><th class="mainTableHeader" colspan="2">{{ item.id }} - {{ item.subject }}</thead></tr>
+<tr><th class="mainTableHeader" colspan="2">{{ item.id }} - {{ item.subject }}</th></tr>
 <tr><td colspan="2">{{ item.post }}</td></tr>
 <tr class="mainTableFooter">
     <td width="75%">posted by {{ item.user.getUser }} | {{ item.date.format('Y-m-d') }}</td>

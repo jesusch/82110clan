@@ -5,6 +5,9 @@
         <title>{% block title %}82IIo Clan || www.82110clan.de{% endblock %}</title>
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <script src="{{ asset('js/index.js') }}"></script>
+	{% block stylesheets %}
+	<style>{% include "index.css.twig" %}</style>
+	{% endblock %}
     </head>
     <body>
 
@@ -15,7 +18,7 @@
    <!-- Begin Wrapper -->
    <div id="wrapper">
    
-   <div class="table>
+   <div class="table">
    
     
    
@@ -33,7 +36,7 @@
                 <p id="pendule">time</p>
                 <p id="date">date</p>
             </div>
-            <img src="{{ asset('images/nav01.png') }}">
+            <img alt="nav01" src="{{ asset('images/nav01.png') }}">
             <div id="hitcounter">
                 <p><a href="?page=online">42 Hits</a><br>
                 (seit 12.11.2k)<br>
@@ -48,7 +51,7 @@
     
       <!-- Begin Content -->
       <div class="td" id="content">
-        <div id="contentHeader"><img src="{{ asset('images/contentHead' ~ name | capitalize ~'.png') }}"</div>
+        <div id="contentHeader"><img alt="contentHead" src="{{ asset('images/contentHead' ~ name | capitalize ~'.png') }}"></div>
         {% block content %}Content!{% endblock %}</div>
       <!-- End Content -->
       
@@ -66,14 +69,14 @@
         <div class="td">
             <div id="w3c" >
              <a href="http://validator.w3.org/check?uri=http://www.82110clan.de" target="_blank">
-               <img src="{{ asset('img/w3c-valid.gif') }}" /></a>
+               <img alt="w3c check" src="{{ asset('img/w3c-valid.gif') }}" /></a>
             </div>
         </div>
     </div>
     <!-- End W3C -->
     
     <div class="tr">
-        <img src="{{ asset('images/footer00.png') }}" />
+        <img alt="footer00" src="{{ asset('images/footer00.png') }}" />
     </div>
    
     
@@ -88,11 +91,11 @@
     </div>
     
     </div>
-    <!-- End Footer>
+    <!-- End Footer -->
 
     
      
-   </div>
+   </div></div>
    <!-- End Wrapper -->
    
 {% endblock %}
@@ -100,8 +103,5 @@
 {% block javascript %}
 {% endblock %}
 
-{% block stylesheets %}
-    <style>{% include "index.css.twig" %}</style>
-{% endblock %}
     </body>
 </html>
